@@ -1,5 +1,28 @@
 /* your beautiful css styling goes here! */
-
 /* Note: an asteroid image is included in this repo.
 Feel free to use it if you like. */
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
+.scoreboard {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: white; }
+
+.board {
+  height: 99%;
+  width: 100%;
+  background-color: black; }
+  .board .assteroid {
+    background-image: url("asteroid.png");
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px; }
+
+/*# sourceMappingURL=styles.css.map */
