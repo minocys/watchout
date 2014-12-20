@@ -4,14 +4,14 @@ var score = 0;
 var highScore = d3.select('.high').select('span');
 var collisions = d3.select('.collisions').select('span');
 var currentScore = d3.select('.current').select('span');
-var enemies = 20;
+var enemies = 25;
 
 //utility to generate array of objects with coordinates as values
 var makeCoords = function(number){
   var coordinates = [];//an array of objects with x:y key/value
   for(var i = 0; i < number; i++){
-    var x = Math.floor(Math.random()*(window.innerWidth-100));
-    var y = Math.floor(Math.random()*(window.innerHeight-100));
+    var x = Math.floor(Math.random()*(window.innerWidth-20));
+    var y = Math.floor(Math.random()*(window.innerHeight-20));
     var obj = {'x':x, 'y':y};
     coordinates.push(obj);
   }
@@ -42,9 +42,9 @@ gameBoard.selectAll('svg')
           score = 0;
         })
         .append('circle')
-        .attr('cx', 20)
-        .attr('cy', 20)
-        .attr('r', 20)
+        .attr('cx', 15)
+        .attr('cy', 15)
+        .attr('r', 15)
         .style('fill', 'purple');
 
 //Enemy movement - interval = time between each move, duration = speed of objects
