@@ -16,16 +16,11 @@ body, html{
   top:30px;
   right:30px;
   color:white;
+  width: 150px;
 }
 
-.board{
+.gameboard{
   height : 99%;
   width : 100%;
   background-color : black;
-  .assteroid{
-    background-image : url('asteroid.png');
-    background-size : 80px 80px;
-    width: 80px;
-    height: 80px;
-  }
 }

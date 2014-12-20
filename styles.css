@@ -13,16 +13,12 @@ body, html {
   position: absolute;
   top: 30px;
   right: 30px;
-  color: white; }
+  color: white;
+  width: 150px; }
 
-.board {
+.gameboard {
   height: 99%;
   width: 100%;
   background-color: black; }
-  .board .assteroid {
-    background-image: url("asteroid.png");
-    background-size: 80px 80px;
-    width: 80px;
-    height: 80px; }
 
 /*# sourceMappingURL=styles.css.map */
