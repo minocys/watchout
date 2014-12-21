@@ -27,7 +27,10 @@ var gameBoard = d3.select('body')
 gameBoard.selectAll('svg')
         .data(makeCoords(enemies)) //storage needs to hold an object of all enemies to appear on board
         .enter()
-        .append('svg')
+        .append('svg:image')
+        .attr('xlink:href', 'shuriken.png')
+        .attr('height', 40)
+        .attr('width', 40)
         .classed('enemy', true)
         .attr({
           x: function(d){return Number(d.x)},
@@ -40,12 +43,7 @@ gameBoard.selectAll('svg')
             highScore.text(score);
           }
           score = 0;
-        })
-        .append('circle')
-        .attr('cx', 15)
-        .attr('cy', 15)
-        .attr('r', 15)
-        .style('fill', 'purple');
+        });
 
 //Enemy movement - interval = time between each move, duration = speed of objects
 setInterval(function(){
@@ -77,10 +75,10 @@ gameBoard.on('mousemove', function(d){
 });
 
 //score keeper
-setInterval( function() {
+d3.timer( function() {
   score++;
   currentScore.text(score);
-}, 40);
+});
 
 
 
